@@ -26,7 +26,7 @@ A Powerline-style Git-aware fish theme optimized for awesome
 
 Install a [nerd fonts patched font](https://github.com/ryanoasis/nerd-fonts#option-4-homebrew-fonts), and enable nerd fonts support:
 
-```bash
+```shell
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
 set -g theme_nerd_fonts yes
@@ -74,6 +74,18 @@ A fast linters runner for Go
 
 ### [gotestsum](https://github.com/gotestyourself/gotestsum)
 `gotestsum` runs tests using `go test -json`, prints formatted test output, and a summary of the test run. It is designed to work well for both local development, and for automation like CI.
+
+### [colima](https://github.com/abiosoft/colima)
+Container runtimes for macOS - great alternative to Docker Desktop
+
+```shell
+brew install colima
+brew install docker docker-compose
+mkdir -p ~/.docker/cli-plugins
+ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+
+colima start
+```
 
 ---
 
