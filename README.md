@@ -105,6 +105,32 @@ A productivity application for macOS.
 ### [Display Maid](https://funk-isoft.com/display-maid.html)
 Save and restore windows based on your display configuration or user created profiles
 
+### [Brackets](https://brackets.io/)
+Modern open-source text editor. I used to use Atom but that's being sunsetted :(
+
+### [DiffMerge](https://sourcegear.com/diffmerge/)
+Great UI tool to compare and merge files. Use for resolving git conflicts.
+
+To add the command line support, do the following in the DMG mounted volume:
+
+```shell
+sudo cp Extras/diffmerge.sh /usr/local/bin/diffmerge
+sudo chmod 755 /usr/local/bin/diffmerge
+sudo mkdir -p /usr/local/share/man/man1/
+sudo cp Extras/diffmerge.1 /usr/local/share/man/man1/
+```
+
+Then to set it as your preferred tool for git on the command line:
+
+```shell
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd "/usr/local/bin/diffmerge \"\$LOCAL\" \"\$REMOTE\""
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.trustExitCode true
+git config --global mergetool.diffmerge.cmd "/usr/local/bin/diffmerge --merge --result=\"\$MERGED\" \"\$LOCAL\" \"\$BASE\" \"\$REMOTE\""
+```
+
+
 ### [IntelliJ IDEA Ultimate](https://www.jetbrains.com/idea/)
 My IDE of choice. Includes great support for Go. Recommend the following plugins:
 
@@ -113,6 +139,9 @@ My IDE of choice. Includes great support for Go. Recommend the following plugins
 | Go | Adds Go support (this has all the functionality of GoLand) |
 | GO Imports Tidy | Helps group your Go import lines |
 | Go Linter | Integrates the golangci-lint linters |
+| Terraform and HCL | Support for Terraform |
+| Kubernetes | Jetbrains official support for Kubernetes |
+| AWS Toolkit | Official AWS plugin from Amazon |
 
 
 ---
