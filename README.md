@@ -180,7 +180,7 @@ I regularly use the following browser plugins:
 | [OneTab](https://www.one-tab.com/)                                                                                              | Save memory and reduce anxiety by collapsing all open tabs into a single page list |
 | [AdblockPlus](https://adblockplus.org/)                                                                                         | Get rid of annoying ads                                                            |
 | [PrintFriendly](https://www.printfriendly.com/)                                                                                 | Remove any unnecessary elements from web pages before printing                     |
-
+| [AutoHideDownloadsBar](https://chrome.google.com/webstore/detail/autohidedownloadsbar/gkmndgjgpolmikgnipipfekglbbgjcel)         | Hide the annoying Downloads bar in Chrome                                          |
 ---
 
 ## Config files
