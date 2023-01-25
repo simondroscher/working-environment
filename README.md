@@ -103,6 +103,8 @@ ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugin
 colima start
 ```
 
+Note you'll also likely need to add the following environment variable: `DOCKER_HOST=unix:///$HOME/.colima/docker.sock`
+
 ---
 
 ## Mac Apps
